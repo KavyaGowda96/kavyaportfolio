@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="file.css">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">Portfolio</div>
+    <nav>
+        <a target="_blank" href="home.html">Home</a>
+        <a target="_blank" href="about.html">About Me</a>
+        <a target="_blank" href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<section class="page">
+    <h2>Contact Me</h2>
+
+    <form class="contact-form" id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="number" placeholder="Number" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <div class="button-row">
+          <button type="button" onclick="window.location.href='home.html'">Home</button>
+          <button type="button" onclick="window.location.href='about.html'">About Me</button>
+          <button type="submit">Send Message</button>
+        </div>
+    </form>
+</section>
+
+
+</body>
+</html>
+<script>
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+    var form = event.target;
+    if (!form.checkValidity()) {
+        event.preventDefault();
+        alert('Please fill the details');
+    } else {
+        window.location.href = 'thank.html';
+        event.preventDefault();
+    }
+});
+</script>
+</html>
